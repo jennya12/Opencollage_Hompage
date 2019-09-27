@@ -39,10 +39,10 @@ def handle_message(event):
     reply_message = ""
     if event.message.text == "안녕":
         reply_message = "냥냥"
-    elif event.message.text == "유선님 안녕하세요":
-        reply_message = "유선님 안녕하세요 냥냥!"
-    elif "도한" in event.message.text:
-        reply_message = "맥주한잔해요!"
+    elif event.message.text == "귀여워":
+        reply_message = "냥냥펀치!"
+    elif "츄르" in event.message.text:
+        reply_message = "뭘 하면 줄꺼냥!"
     else:
         return
 
