@@ -41,6 +41,10 @@ def handle_message(event):
         reply_message = "냥냥"
     elif event.message.text == "유선님 안녕하세요":
         reply_message = "유선님 안녕하세요 냥냥!"
+    elif "도한" in event.message.text:
+        reply_message = "맥주한잔해요!"
+    else:
+        return
 
     line_bot_api.reply_message(
         event.reply_token,
