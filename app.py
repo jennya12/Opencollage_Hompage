@@ -53,6 +53,26 @@ def handle_message(event):
     elif event.message.text == "가위" or event.message.text == "바위" or event.message.text == "보":
         reply_list = ["가위", "바위", "보"]
         reply_message = str(random.sample(reply_list, 1)[0])
+        if event.message.text == "가위" and reply_message == "바위":
+            reply_message = reply_message + "내가 이겼다 냥!"
+        elif event.message.text == "가위" and reply_message == "보":
+            reply_message = reply_message + "이겨서 좋냐"
+        elif event.message.text == "가위" and reply_message == "가위":
+            reply_message = reply_message + "비겼다!! 한번 더 하자 냥!"
+        elif event.message.text == "바위" and reply_message == "보":
+            reply_message = reply_message + "내가 이겼다 냥!"
+        elif event.message.text == "바위" and reply_message == "가위":
+            reply_message = reply_message + "이겨서 좋냐"
+        elif event.message.text == "바위" and reply_message == "바위":
+            reply_message = reply_message + "비겼다!! 한번 더 하자 냥!"
+        elif event.message.text == "보" and reply_message == "가위":
+            reply_message = reply_message + "내가 이겼다 냥!"
+        elif event.message.text == "보" and reply_message == "바위":
+            reply_message = reply_message + "이겨서 좋냐"
+        elif event.message.text == "보" and reply_message == "보":
+            reply_message = reply_message + "비겼다!! 한번 더 하자 냥!"
+        else:
+            return
     else:
         return
 
