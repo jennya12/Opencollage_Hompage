@@ -8,6 +8,7 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
+from random import *
 
 app = Flask(__name__)
 
@@ -41,6 +42,10 @@ def handle_message(event):
         reply_message = "냥냥"
     elif event.message.text == "귀여워":
         reply_message = "냥냥펀치!"
+    elif event.message.text == "심심해":
+        reply_message = "우냐앙?😻"
+    elif event.message.text == "좋아해":
+        reply_message = "후후후😻"
     elif "츄르" in event.message.text:
         reply_message = "뭘 하면 줄꺼냥!"
     else:
