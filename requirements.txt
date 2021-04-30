@@ -10,6 +10,6 @@ Jinja2==2.10.1
 line-bot-sdk==1.14.0
 MarkupSafe==1.1.1
 requests==2.22.0
-urllib3==1.25.5
+urllib3==1.25.8
 virtualenv==16.7.2
 Werkzeug==0.15.4
